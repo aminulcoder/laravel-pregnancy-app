@@ -14,7 +14,7 @@
                         <x-form.input name="email" label="Email" type="email" />
                         {{-- <x-form.select name="role_ids[]" label="Select Role" :data="$roles" /> --}}
 
-                        <div class="py-1">
+                        {{-- <div class="py-1">
                             <label for="role_ids" class="text-gray-500 dark:text-gray-500">Asign Role</label>
                             <select name="role_ids[]" id="role_ids" multiple
                                 class="js-example-basic-multiple py-2 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
@@ -26,7 +26,7 @@
                             </select>
                             @error('{{ $role_ids }}')
                                 <p class="text-sm text-red-600 mt-2">{{ $message }}</p>
-                            @enderror
+                            @enderror --}}
                         </div>
 
                         <x-form.input name="password" label="Password" type="password" />

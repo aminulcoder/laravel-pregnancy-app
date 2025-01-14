@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\Blog\BlogController;
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\Doctor\DoctorController;
 use App\Http\Controllers\Admin\EditorImageController;
 use App\Http\Controllers\Admin\Setting\AboutmeSettingController;
 use App\Http\Controllers\Admin\Setting\ChatSectionController;
@@ -25,6 +26,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('role', RoleController::class);
     Route::resource('category',           CategoryController::class);
+    Route::resource('doctor',           DoctorController::class);
     Route::resource('user',               UserController::class);
 
     Route::get('profile/', [AdminProfileController::class, 'adminProfile'])->name('admin.profile');
