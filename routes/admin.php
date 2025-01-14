@@ -25,9 +25,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('blog', BlogController::class);
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('role', RoleController::class);
-    Route::resource('category',           CategoryController::class);
-    Route::resource('doctor',           DoctorController::class);
-    Route::resource('user',               UserController::class);
+    Route::resource('category',   CategoryController::class);
+    Route::resource('doctor',      DoctorController::class);
+    Route::resource('user',       UserController::class);
 
     Route::get('profile/', [AdminProfileController::class, 'adminProfile'])->name('admin.profile');
     Route::put('profile/update/{id}', [AdminProfileController::class, 'UpdateAdminProfile'])->name('admin.profile.update');
